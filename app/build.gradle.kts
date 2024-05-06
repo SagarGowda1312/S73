@@ -45,6 +45,7 @@ dependencies {
     implementation(libs.androidx.espresso.idling.resource)
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.androidx.espresso.intents)
+    implementation(libs.androidx.espresso.contrib)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
    // androidTestImplementation(libs.androidx.espresso.core)

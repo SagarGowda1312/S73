@@ -56,12 +56,18 @@ fun whenAppOpens(){
         Espresso.onView(withId(R.id.selection_row_value))
             .check(ViewAssertions.matches(withText(itemToClickOn)))
     }
+
+
+
     @Test
     fun checkEmptyFieldInRowTitle() {
         // Now that we are on desired item, we can verify using onView method
         Espresso.onView(withId(R.id.selection_row_value))
             .check(ViewAssertions.matches(withText("")))
     }
+
+
+
     @Test
     fun whenClickOnButton_Testbuttovalue(){
         val itemToClickOn = "item: 30"
@@ -79,6 +85,9 @@ fun whenAppOpens(){
 
 
     }
+
+
+
 
     @Test
     fun whenClickOnAllButtons(){
