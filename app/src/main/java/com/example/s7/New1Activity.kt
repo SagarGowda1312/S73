@@ -52,7 +52,7 @@ class New1Activity : Activity() {
 
             if (hasCallPhonePermission) startActivity(createCallIntentFromNumber()) else Toast.makeText(
                 this,
-                "Grantttttttt permissssssssssionnnnnnnnnn",
+                "Grantttttttt permissssssssssion ",
                 Toast.LENGTH_SHORT
             ).show()
 
