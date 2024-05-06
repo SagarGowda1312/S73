@@ -72,7 +72,7 @@ class New2Activity : Activity() {
 
     companion object {
         @VisibleForTesting
-        protected val ROW_TEXT = "ROW_TEXT"
+        val ROW_TEXT = "ROW_TEXT"
 
         @VisibleForTesting
         protected val ROW_ENABLED = "ROW_ENABLED"

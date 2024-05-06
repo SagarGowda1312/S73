@@ -16,7 +16,7 @@ class New1Activity1Test {
     val activity = ActivityScenarioRule(MainActivity::class.java)
 
     @Test
-    fun testText() {
+    fun test_Input_Text() {
         val user_input="Sagar"
         onView(ViewMatchers.withId(R.id.editTextUserInput))
             .perform(ViewActions.typeText(user_input))
@@ -27,6 +27,20 @@ class New1Activity1Test {
         onView(ViewMatchers.withId(R.id.textView2))
             .check(ViewAssertions.matches(ViewMatchers.withText(user_input)))
     }
+
+    @Test
+    fun test_blank_entry(){
+        val blank_input=""
+        onView(ViewMatchers.withId(R.id.activityChangeTextBtn))
+            .perform(ViewActions.click())
+
+        onView(ViewMatchers.withId(R.id.textView2))
+            .check(ViewAssertions.matches(ViewMatchers.withText(blank_input)))
+
+    }
+
+
+
 
 
 
