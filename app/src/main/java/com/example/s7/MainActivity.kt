@@ -22,6 +22,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.annotation.VisibleForTesting
+import androidx.test.espresso.IdlingResource
 import com.example.s7.IdlingResource.SimpleIdlingResource
 
 /**
@@ -80,4 +82,13 @@ class MainActivity : Activity(), View.OnClickListener {
         mTextView!!.text = text
 
     }
+
+    @get:VisibleForTesting
+    val idlingResource: IdlingResource
+        get() {
+            if (mIdlingResource == null) {
+                mIdlingResource = SimpleIdlingResource()
+            }
+            return mIdlingResource as SimpleIdlingResource
+        }
 }
