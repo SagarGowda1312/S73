@@ -2,19 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="Adopterview2">
+        <State />
+      </entry>
       <entry key="MainActivity">
-        <State />
-      </entry>
-      <entry key="Sample2">
-        <State />
-      </entry>
-      <entry key="Sample3">
         <State />
       </entry>
       <entry key="app">
         <State />
       </entry>
-      <entry key="test1()">
+      <entry key="whenAppOpen_TextExists()">
+        <State />
+      </entry>
+      <entry key="whenAppOpens()">
+        <State />
+      </entry>
+      <entry key="whenScrollToLastItem_ThenLastItemIsDisplayed()">
         <State />
       </entry>
     </value>

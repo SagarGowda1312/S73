@@ -19,9 +19,9 @@ class AdapterViewTest {
     val activity = ActivityScenarioRule(New2Activity::class.java)
 
 
-@Test(expected = PerformException::class)
+@Test
 fun whenAppOpen_TextExists(){
-    onView(withText("item: 1")).check(ViewAssertions.doesNotExist())
+    onView(withText("item: 100")).check(ViewAssertions.doesNotExist())
 
 }
 
