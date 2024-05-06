@@ -39,9 +39,10 @@ class sample1 {
     /** Test to enter a phone number and make a call and verify an intent is launched  */
     @Test
     fun test1() {
-        // val phoneNumber = Uri.parse("tel:" + VALID_PHONE_NUMBER)
+        val number =  "8431186477"
+        val phoneNumber = Uri.parse("tel:" + number)
         onView(ViewMatchers.withId(R.id.editTextUserInput))
-            .perform(ViewActions.typeText("Rathna"), ViewActions.closeSoftKeyboard())
+            .perform(ViewActions.typeText(number), ViewActions.closeSoftKeyboard())
 
         onView(ViewMatchers.withId(R.id.activityChangeTextBtn))
             .perform(ViewActions.click())
@@ -52,7 +53,7 @@ class sample1 {
         Intents.intended(
             AllOf.allOf(
                 IntentMatchers.hasAction(Intent.ACTION_CALL),
-                //  IntentMatchers.hasData(phoneNumber)
+                IntentMatchers.hasData(phoneNumber)
 
 
             )
@@ -65,6 +66,7 @@ class sample1 {
         // Clears intent state, must be called after each test case
         Intents.release()
     }
+
 
 
 
