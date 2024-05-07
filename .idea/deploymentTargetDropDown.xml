@@ -2,7 +2,13 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="MainActivity">
+      <entry key="Suite1">
+        <State />
+      </entry>
+      <entry key="Suite2">
+        <State />
+      </entry>
+      <entry key="Suite3">
         <State />
       </entry>
       <entry key="app">
@@ -11,13 +17,7 @@
       <entry key="scrollToSpecificLocation()">
         <State />
       </entry>
-      <entry key="whenAppLaunches()">
-        <State />
-      </entry>
       <entry key="whenScrollToMiddle()">
-        <State />
-      </entry>
-      <entry key="whenScrollToSpecficPositon()">
         <State />
       </entry>
     </value>
