@@ -54,7 +54,7 @@ fun whenAppOpens(){
 
         // Now that we are on desired item, we can verify using onView method
         Espresso.onView(withId(R.id.selection_row_value))
-            .check(ViewAssertions.matches(withText(itemToClickOn)))
+            .check(ViewAssertions.matches(withText("30")))
     }
 
 
