@@ -2,22 +2,22 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="Adopterview2">
-        <State />
-      </entry>
       <entry key="MainActivity">
         <State />
       </entry>
       <entry key="app">
         <State />
       </entry>
-      <entry key="whenAppOpen_TextExists()">
+      <entry key="scrollToSpecificLocation()">
         <State />
       </entry>
-      <entry key="whenAppOpens()">
+      <entry key="whenAppLaunches()">
         <State />
       </entry>
-      <entry key="whenScrollToLastItem_ThenLastItemIsDisplayed()">
+      <entry key="whenScrollToMiddle()">
+        <State />
+      </entry>
+      <entry key="whenScrollToSpecficPositon()">
         <State />
       </entry>
     </value>

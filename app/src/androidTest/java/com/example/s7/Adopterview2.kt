@@ -6,6 +6,7 @@ import androidx.test.espresso.PerformException
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
@@ -58,13 +59,13 @@ class Adopterview2 {
             .perform(ViewActions.click())
 
         onView(ViewMatchers.withId(R.id.selection_row_value))
-            .check(ViewAssertions.matches(ViewMatchers.withText(itemToClickOn)))
+            .check(ViewAssertions.matches(ViewMatchers.withText("30")))
 
     }
 
     @Test
     fun emptyFieldInRowValue() {
-        onView(ViewMatchers.withId(R.id.selection_row_value))
+        onView(withId(R.id.selection_row_value))
             .check(ViewAssertions.matches(ViewMatchers.withText("")))
     }
 
@@ -107,6 +108,21 @@ class Adopterview2 {
 
     @Test
     fun whenButtonToggledANdToggledBack_NotChecked() {
+        val itemToClick = "item: 30"
+        Espresso.onData(
+            Matchers.hasEntry(
+                Matchers.equalTo(New2Activity.ROW_TEXT),
+                Matchers.`is`(itemToClick)
+            )
+            )
+            .onChildView(ViewMatchers.withId(R.id.rowToggleButton))
+            .perform(ViewActions.click())
+            .check(ViewAssertions.matches(ViewMatchers.isChecked()))
+            .perform(ViewActions.click())
+            .check(ViewAssertions.matches(ViewMatchers.isNotChecked()))
+
+
+
 
     }
 
