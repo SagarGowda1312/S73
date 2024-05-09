@@ -36,7 +36,6 @@ onView(ViewMatchers.withId(R.id.recyclerView))
 
     @Test
     fun whenScrollToSpecficPositon(){
-
         val itemBelowFold = 40
         Espresso.onView(ViewMatchers.withId(R.id.recyclerView))
             .perform(
@@ -45,13 +44,25 @@ onView(ViewMatchers.withId(R.id.recyclerView))
                 )
             )
         val expectedText = String.format("This is element #%d", itemBelowFold)
-        Espresso.onView(ViewMatchers.withText(expectedText))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        onView(ViewMatchers.withText(expectedText))
+            .check(ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
     }
+
+
+
+
+
+
+
+
+
+
 
 
     @Test
     fun whenScrollToItemInTheMiddle_ThenCheckItemWithSpecialTextIsDisplayed() {
+
         Espresso.onView(ViewMatchers.withId(R.id.recyclerView)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
                 25
@@ -59,7 +70,4 @@ onView(ViewMatchers.withId(R.id.recyclerView))
         )
         Espresso.onView(ViewMatchers.withText("This is middle"))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-    }
-
-
-}
+    } }

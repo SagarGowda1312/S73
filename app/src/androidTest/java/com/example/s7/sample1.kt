@@ -1,5 +1,4 @@
 package com.example.s7
-
 import android.content.Intent
 import android.net.Uri
 import androidx.test.espresso.Espresso.onView
@@ -21,21 +20,20 @@ import org.junit.Test
 @RunWith(AndroidJUnit4::class)
 @LargeTest
 class sample1 {
-
-    @get:Rule
+    @JvmField
+    @get:Rule   //Defining  Rule for granting permission for giving call
     var grantPermissionRule = GrantPermissionRule.grant("android.permission.CALL_PHONE")
 
     @get:Rule
     var testRule = ActivityScenarioRule(
-        MainActivity::class.java
+        MainActivity::class.java //Defining  mainactivity.java
     )
+
 
     @Before
     fun setUpIntents() {
         Intents.init()
-
     }
-
     /** Test to enter a phone number and make a call and verify an intent is launched  */
     @Test
     fun test1() {
@@ -54,10 +52,7 @@ class sample1 {
             AllOf.allOf(
                 IntentMatchers.hasAction(Intent.ACTION_CALL),
                 IntentMatchers.hasData(phoneNumber)
-
-
             )
-
         )
     }
 
@@ -66,9 +61,13 @@ class sample1 {
         // Clears intent state, must be called after each test case
         Intents.release()
     }
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+

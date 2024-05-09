@@ -8,13 +8,12 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.s7"
+        applicationId ="com.example.s7"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -46,11 +45,7 @@ dependencies {
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.androidx.espresso.intents)
     implementation(libs.androidx.espresso.contrib)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-   // androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation("androidx.test:runner:1.4.0")
-    androidTestImplementation("androidx.test:rules:1.4.0")
-    androidTestImplementation("androidx.test.espresso:espresso-idling-resource:3.5.1")
+    implementation(libs.androidx.junit.ktx)
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

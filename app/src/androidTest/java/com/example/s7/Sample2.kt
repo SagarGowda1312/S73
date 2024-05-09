@@ -12,7 +12,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-@LargeTest
 class Sample2 {
     @get:Rule
     var activityScenarioRule = ActivityScenarioRule(MainActivity::class.java)
@@ -75,7 +74,6 @@ class Sample2 {
 
         onView(ViewMatchers.withId(R.id.textView2))
             .check(ViewAssertions.matches(ViewMatchers.withText(text)))
-
     }
 
     @Test
@@ -86,9 +84,5 @@ class Sample2 {
 
         onView(ViewMatchers.withId(R.id.textView2))
             .check(ViewAssertions.matches(ViewMatchers.withText("")))
-
     }
-
-
-
 }
